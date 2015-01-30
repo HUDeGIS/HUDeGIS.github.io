@@ -265,7 +265,7 @@ a:focus {
 }
 
 .portfolio-item {
-	border: solid lightgray
+	/*border: solid lightgray*/
 }
 .portfolio-item .title:before {border-radius:0; display:none}
 .portfolio-item p {margin:0px 0 30px;}
