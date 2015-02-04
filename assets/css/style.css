@@ -299,10 +299,11 @@ a:focus {
 /* Testimonials Wrap */
 #twrap {
 	background: url(../img/t-back.jpg) no-repeat center top;
+	background: url(http://54.164.175.247/static/geonode/img/hudbackground.jpg) no-repeat center top;
 	margin-top: 0px;
 	padding-top:60px;
 	text-align:center;
-	background-attachment: relative;
+	/*background-attachment: relative;*/
 	background-position: center center;
 	min-height: 450px;
 	width: 100%;
@@ -346,7 +347,8 @@ a:focus {
 #footerwrap {
 	padding-top: 60px;
 	padding-bottom: 60px;
-	background: #384452;
+	/*background: #384452;*/
+	background: #001021;
 }
 
 #footerwrap p {

@@ -82,16 +82,31 @@
 				<div class="well">
 					<h4>Contents</h4>
 					<ul class="nav">
-						<li><a href="#geoservice">Geoservice</a></li>
-						<li><a href="#examples">Section 8 Housing</a></li>
-						<li><a href="#elderly">Elderly and Disabled Query</a></li>
-						<li><a href="#allquery">Query Parameters</a></li>
+						<li><a href="#geoservice"><strong>Geoservice</strong></a></li>
+						<ul class="nav" style="padding-left:10px">
+							<li><a href="#examples">Section 8 Housing</a></li>
+							<li><a href="#elderly">Elderly and Disabled Query</a></li>
+							<li><a href="#allquery">Query Parameters</a></li>
+
+						</ul>
+						<li><a href="#ddict"><strong>Data Dictionaries</strong></a></li>
+						<ul class="nav" style="padding-left:10px">
+							<li><a href="#phd">Public Housing Developments</a></li>
+							<li><a href="#pha">Public Housing Authorities</a></li>
+							<li><a href="#phb">Public Housing Buildings</a></li>
+							<li><a href="#mfp">Multi-Family Properties</a></li>
+							<li><a href="#lai">Location Affordability Index</a></li>
+							<li><a href="#lihtc">Low-Income Housing Credit</a></li>
+							<li><a href="#hcv">HCV By Tract</a></li>
+							<li><a href="#fmr">Fair Market Rents</a></li>
+
+						</ul>
 					</ul>
 				</div>
 	 		</div>
 
 	 		<div class="col-sm-8">
-				<h4 id="geoservice">The Hackathon's GeoService for HUD Data</h4>
+				<h3 id="geoservice">The Hackathon's GeoService for HUD Data</h3>
 				<p>
 				We have a GeoService (ArcGIS REST API) available for the hackathon.
 				</p>
@@ -116,7 +131,7 @@
 
 
 				<br>
-				<h4 id="examples">Example Queries</h4>
+				<h3 id="examples">Example Queries</h3>
 				<p>
 					Here's how you would query the MultiFamily Properties layer for low income.
 				</p>
@@ -135,10 +150,23 @@
 					We then include this directly in our query using the geometry parameter:
 				</p>
 				<pre>http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?where=is_sec8_ind%3D%27Y%27&<strong>geometry={"xmin":-13676570.60682338,"ymin":6018679.182711435,"xmax":-13559316.205433873,"ymax":6064541.399682558,"spatialReference":{"wkid":102100}}</strong>&f=pgeojson</pre>
+
 				<p><strong>Multifamily Elderly and Disabled Properties</strong></p>
-				<pre id="allquery">is_sec8_ind='Y'</pre>
+				<p>
+					For this query, we'll need to combine a few different criteria. These include:
+				</p>
+				<pre id="allquery">(1) is_sec8_202='Y'<br>(2) IS_811_CAPITAL_ADVANCE_IND='Y'<br>(3) IS_PAC_811_IND='Y'<br>(4) IS_PRAC_811_IND='Y'</pre>
+				<p>
+					To combine critera, we can use logic statments in the URL call. To include this, add the criteria
+					to the where statement with AND/OR between each criteria, as shown in the example below:
+				</p>
+				<pre>http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?<strong>where=IS_811_CAPITAL_ADVANCE_IND='Y'+OR+IS_PAC_811_IND='Y'+OR+IS_PRAC_811_IND='Y'</strong>&f=pgeojson</pre>
+				<p>
+					Lastly, lets trim the results down to return Seattle results only.
+				</p>
+				<pre>http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?<strong>where=HUB_NAME_TEXT='Seattle'+AND+(IS_811_CAPITAL_ADVANCE_IND='Y'+OR+IS_PAC_811_IND='Y'+OR+IS_PRAC_811_IND='Y')</strong>&f=pgeojson</pre>
 				<br>
-				<h4>All Query Parameters</h4>
+				<h3>All Query Parameters</h3>
 				<table class="table">
 					<thead>
 					<tr>
@@ -246,6 +274,145 @@
 					<tr>
 						<td>Format</td>
 						<td>Options include html, json, and geojson</td>
+					</tr>
+					</tbody>
+				</table>
+
+				<br>
+				<h3 id="ddict">Data Dictionaries</h3>
+				<h4 id="phd">Public Housing Developments</h4>
+				<table class="table">
+					<thead>
+					<tr>
+						<th>Field</th>
+						<th>Alias</th>
+						<th>Description</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Where1</td>
+						<td>Where</td>
+						<td>The field constructors</td>
+					</tr>
+					</tbody>
+				</table>
+				<h4 id="pha">Public Housing Authorities</h4>
+				<table class="table">
+					<thead>
+					<tr>
+						<th>Field</th>
+						<th>Alias</th>
+						<th>Description</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Where1</td>
+						<td>Where</td>
+						<td>The field constructors</td>
+					</tr>
+					</tbody>
+				</table>
+				<h4 id="phb">Public Housing Buildings</h4>
+				<table class="table">
+					<thead>
+					<tr>
+						<th>Field</th>
+						<th>Alias</th>
+						<th>Description</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Where1</td>
+						<td>Where</td>
+						<td>The field constructors</td>
+					</tr>
+					</tbody>
+				</table>
+				<h4 id="mfp">Multi-Family Properties</h4>
+				<table class="table">
+					<thead>
+					<tr>
+						<th>Field</th>
+						<th>Alias</th>
+						<th>Description</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Where1</td>
+						<td>Where</td>
+						<td>The field constructors</td>
+					</tr>
+					</tbody>
+				</table>
+				<h4 id="lai">Location Affordability Index</h4>
+				<table class="table">
+					<thead>
+					<tr>
+						<th>Field</th>
+						<th>Alias</th>
+						<th>Description</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Where1</td>
+						<td>Where</td>
+						<td>The field constructors</td>
+					</tr>
+					</tbody>
+				</table>
+				<h4 id="lihtc">Low-Income Housing Credit (LIHTC)</h4>
+				<table class="table">
+					<thead>
+					<tr>
+						<th>Field</th>
+						<th>Alias</th>
+						<th>Description</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Where1</td>
+						<td>Where</td>
+						<td>The field constructors</td>
+					</tr>
+					</tbody>
+				</table>
+				<h4 id="hcv">HCV By Tract</h4>
+				<table class="table">
+					<thead>
+					<tr>
+						<th>Field</th>
+						<th>Alias</th>
+						<th>Description</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Where1</td>
+						<td>Where</td>
+						<td>The field constructors</td>
+					</tr>
+					</tbody>
+				</table>
+				<h4 id="fmr">Fair Market Rents</h4>
+				<table class="table">
+					<thead>
+					<tr>
+						<th>Field</th>
+						<th>Alias</th>
+						<th>Description</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Where1</td>
+						<td>Where</td>
+						<td>The field constructors</td>
 					</tr>
 					</tbody>
 				</table>
@@ -419,6 +586,22 @@
   	<script src="assets/js/jquery.isotope.min.js"></script>
   	<script src="assets/js/custom.js"></script>
 
+  <script>
+	  $(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+			  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				  var target = $(this.hash);
+				  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				  if (target.length) {
+					  $('html,body').animate({
+						  scrollTop: target.offset().top-80
+					  }, 1000);
+					  return false;
+				  }
+			  }
+		  });
+	  });
+  </script>
 
   </body>
 </html>
