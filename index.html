@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,479 +19,601 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 
-
-	  <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
     <script src="assets/js/modernizr.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">HUD's Zillow Hackathon</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">HUD's Zillow Hackathon</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">HOME</a></li>
-            <li><a href="intro.html">INTRO</a></li>
-			<li><a href="http://zillowhack.hud.opendata.arcgis.com">DATA</a></li>
-            <li><a href="docs.html">DOCS</a></li>
-		  </ul>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">HOME</a></li>
+                <li><a href="intro.html">INTRO</a></li>
+                <li><a href="http://zillowhack.hud.opendata.arcgis.com">DATA</a></li>
+                <li><a href="docs.html">DOCS</a></li>
+            </ul>
             <form class="navbar-form navbar-right" role="search" action="javascript: search()">
-			    <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search Data" id="search-input">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search Data" id="search-input">
                 </div>
-			</form>
-        </div><!--/.nav-collapse -->
-      </div>
+            </form>
+        </div>
+        <!--/.nav-collapse -->
     </div>
+</div>
 
-	<!-- *****************************************************************************************************************
-	 HEADERWRAP
-	 ***************************************************************************************************************** -->
-	<div id="headerwrap" style="-webkit-box-shadow: 0px 1px 1px grey; -moz-box-shadow: 0px 1px 1px grey; box-shadow: 0px 1px 1px grey;">
-	    <div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<h3>Help us connect Americans to affordable, safe, accessible housing and communities</h3>
-					<h1>HUD's Zillow Hackathon</h1>
-					<h5>February 6<sup>th</sup> - 8<sup>th</sup>, 2015</h5>
-				</div>
-					<!--<img src="assets/img/browser.png" class="img-responsive">-->
-			</div><!-- /row -->
-	    </div> <!-- /container -->
-	</div><!-- /headerwrap -->
-	<iframe id="map-par" style="position:fixed;z-index:-1; top:0px" width='100%' height='800px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/zwhitman.l2on037l/attribution.html?access_token=pk.eyJ1IjoiendoaXRtYW4iLCJhIjoieEZNeHdNQSJ9.mXXZjIJ2PYMZ6le-o3f90A'></iframe>
-	<!--<iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/zwhitman.l2on037l/attribution.html?access_token=pk.eyJ1IjoiendoaXRtYW4iLCJhIjoieEZNeHdNQSJ9.mXXZjIJ2PYMZ6le-o3f90A'></iframe>-->
-	<div style="height:300px"></div>
+<!-- *****************************************************************************************************************
+ HEADERWRAP
+ ***************************************************************************************************************** -->
+<div id="headerwrap"
+     style="-webkit-box-shadow: 0px 1px 1px grey; -moz-box-shadow: 0px 1px 1px grey; box-shadow: 0px 1px 1px grey;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h3>Help us connect Americans to affordable, safe, accessible housing and communities</h3>
 
-	<!-- *****************************************************************************************************************
-	 CONTAINER DIV
-	 ***************************************************************************************************************** -->
-	<div id="contain-par" style="background-color:white;z-index: 999;">
+                <h1>HUD's Zillow Hackathon</h1>
+                <h5>February 6<sup>th</sup> - 8<sup>th</sup>, 2015</h5>
+            </div>
+            <!--<img src="assets/img/browser.png" class="img-responsive">-->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /headerwrap -->
+<iframe id="map-par" style="position:fixed;z-index:-1; top:0px" width='100%' height='800px' frameBorder='0'
+        src='https://a.tiles.mapbox.com/v4/zwhitman.l2on037l/attribution.html?access_token=pk.eyJ1IjoiendoaXRtYW4iLCJhIjoieEZNeHdNQSJ9.mXXZjIJ2PYMZ6le-o3f90A'></iframe>
+<!--<iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/zwhitman.l2on037l/attribution.html?access_token=pk.eyJ1IjoiendoaXRtYW4iLCJhIjoieEZNeHdNQSJ9.mXXZjIJ2PYMZ6le-o3f90A'></iframe>-->
+<div style="height:300px"></div>
 
-	<!-- *****************************************************************************************************************
-	 SERVICE LOGOS
-	 ***************************************************************************************************************** -->
-	 <div id="service" style="padding-top:50px">
-	 	<div class="container">
- 			<div class="row centered">
- 				<div class="col-md-4">
- 					<i class="fa fa-desktop"></i>
- 					<h4>Kickoff Presentation</h4>
- 					<p>Check out the kickoff presentation for an overview of what data HUD is bringing to the hackathon, how to access the data, where to go to ask questions and general tips and tricks.</p>
- 					<p><br/><a href="intro.html" class="btn btn-theme">More Info</a></p>
- 				</div>
- 				<div class="col-md-4">
- 					<i class="fa fa-table"></i>
- 					<h4>Data</h4>
- 					<p>Go to the Open Data portal we stood up for HUD data to be used for the Hackathon. We have links to the data all over the place but this is where the data is hosted and the APIs are being served.</p>
- 					<p><br/><a href="http://zillowhack.hud.opendata.arcgis.com" class="btn btn-theme">Data Portal</a></p>
- 				</div>
- 				<div class="col-md-4">
- 					<i class="fa fa-book"></i>
- 					<h4>Documentation</h4>
- 					<p>This is where we're providing some documentation on how the APIs work as well as provide a few usage examples. Hopefully this'll help you get up and running quickly.</p>
- 					<p><br/><a href="docs.html" class="btn btn-theme">API Docs</a></p>
- 				</div>		 				
-	 		</div>
-	 	</div><! --/container -->
-	 </div><! --/service -->
-	 
-	<!-- *****************************************************************************************************************
-	 PORTFOLIO SECTION
-	 ***************************************************************************************************************** -->
-	 <div id="portfoliowrap">
+<!-- *****************************************************************************************************************
+ CONTAINER DIV
+ ***************************************************************************************************************** -->
+<div id="contain-par" style="background-color:white;z-index: 999;">
+
+    <!-- *****************************************************************************************************************
+     SERVICE LOGOS
+     ***************************************************************************************************************** -->
+    <div id="service" style="padding-top:50px">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-md-4">
+                    <i class="fa fa-desktop"></i>
+                    <h4>Kickoff Presentation</h4>
+
+                    <p>Check out the kickoff presentation for an overview of what data HUD is bringing to the hackathon,
+                        how to access the data, where to go to ask questions and general tips and tricks.</p>
+
+                    <p><br/><a href="intro.html" class="btn btn-theme">More Info</a></p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-table"></i>
+                    <h4>Data</h4>
+
+                    <p>Go to the Open Data portal we stood up for HUD data to be used for the Hackathon. We have links
+                        to the data all over the place but this is where the data is hosted and the APIs are being
+                        served.</p>
+
+                    <p><br/><a href="http://zillowhack.hud.opendata.arcgis.com" class="btn btn-theme">Data Portal</a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-book"></i>
+                    <h4>Documentation</h4>
+
+                    <p>This is where we're providing some documentation on how the APIs work as well as provide a few
+                        usage examples. Hopefully this'll help you get up and running quickly.</p>
+
+                    <p><br/><a href="docs.html" class="btn btn-theme">API Docs</a></p>
+                </div>
+            </div>
+        </div>
+        <! --/container -->
+    </div>
+    <! --/service -->
+
+    <!-- *****************************************************************************************************************
+     PORTFOLIO SECTION
+     ***************************************************************************************************************** -->
+    <div id="portfoliowrap">
         <h2>HUD DATASETS</h2>
-		 <hr>
+        <hr>
 
         <div class="portfolio-centered">
             <div class="recentitems portfolio">
-				<div class="portfolio-item graphic-design">
-					<div class="he-wrap tpl6">
-					<h4>Fair Market Rents</h4>
-					<img src="assets/img/portfolio/fmr.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
+                <div class="portfolio-item graphic-design">
+                    <div class="he-wrap tpl6">
+                        <h4>Fair Market Rents</h4>
+                        <img src="assets/img/portfolio/fmr.jpg" alt="">
+
+                        <div class="he-view">
+                            <div class="bg a0" data-animate="fadeIn">
                                 <h3 class="a1" data-animate="fadeInDown">Fair Market Rents</h3>
-                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/e29dca94b6924766a124d7c767e03b75_0" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/FairMarketRents/FeatureServer/0/query?outFields=*&where=1%3D1" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                            
+                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/e29dca94b6924766a124d7c767e03b75_0"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
+                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/FairMarketRents/FeatureServer/0/query?outFields=*&where=1%3D1"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
+                            </div>
+                            <!-- he bg -->
+                        </div>
+                        <!-- he view -->
+                    </div>
+                    <!-- he wrap -->
+                </div>
+                <!-- end col-12 -->
+
                 <div class="portfolio-item web-design">
                     <div class="he-wrap tpl6">
-					<h4>HCV By Tract</h4>
-					<img src="assets/img/portfolio/hcv.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
+                        <h4>HCV By Tract</h4>
+                        <img src="assets/img/portfolio/hcv.jpg" alt="">
+
+                        <div class="he-view">
+                            <div class="bg a0" data-animate="fadeIn">
                                 <h3 class="a1" data-animate="fadeInDown">HCV By Tract</h3>
-                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/42c4d3d6648c4d5196fa0002af457383_0" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/HCVByTract/FeatureServer/0/query?outFields=*&where=1%3D1" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-        
+                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/42c4d3d6648c4d5196fa0002af457383_0"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
+                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/HCVByTract/FeatureServer/0/query?outFields=*&where=1%3D1"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
+                            </div>
+                            <!-- he bg -->
+                        </div>
+                        <!-- he view -->
+                    </div>
+                    <!-- he wrap -->
+                </div>
+                <!-- end col-12 -->
+
                 <div class="portfolio-item graphic-design">
                     <div class="he-wrap tpl6">
-					<h4>LIHTC</h4>
-					<img src="assets/img/portfolio/lihtc.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
+                        <h4>LIHTC</h4>
+                        <img src="assets/img/portfolio/lihtc.jpg" alt="">
+
+                        <div class="he-view">
+                            <div class="bg a0" data-animate="fadeIn">
                                 <h3 class="a1" data-animate="fadeInDown">LIHTC</h3>
-                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/c0d79831f95c46018349657dc768ddc4_0" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?outFields=*&where=1%3D1" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-        
+                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/c0d79831f95c46018349657dc768ddc4_0"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
+                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LIHTC/FeatureServer/0/query?outFields=*&where=1%3D1"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
+                            </div>
+                            <!-- he bg -->
+                        </div>
+                        <!-- he view -->
+                    </div>
+                    <!-- he wrap -->
+                </div>
+                <!-- end col-12 -->
+
                 <div class="portfolio-item graphic-design">
                     <div class="he-wrap tpl6">
-					<h4>Multi-Family Properties</h4>
-					<img src="assets/img/portfolio/mfp.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
+                        <h4>Multi-Family Properties</h4>
+                        <img src="assets/img/portfolio/mfp.jpg" alt="">
+
+                        <div class="he-view">
+                            <div class="bg a0" data-animate="fadeIn">
                                 <h3 class="a1" data-animate="fadeInDown">Multi-Family Properties</h3>
-                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/c55eb46fbc3b472cabd0c2a41f805261_0" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?outFields=*&where=1%3D1" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                                        
+                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/c55eb46fbc3b472cabd0c2a41f805261_0"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
+                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?outFields=*&where=1%3D1"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
+                            </div>
+                            <!-- he bg -->
+                        </div>
+                        <!-- he view -->
+                    </div>
+                    <!-- he wrap -->
+                </div>
+                <!-- end col-12 -->
+
                 <div class="portfolio-item books">
                     <div class="he-wrap tpl6">
-					<h4>Public Housing Authorities</h4>
-					<img src="assets/img/portfolio/pha.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
+                        <h4>Public Housing Authorities</h4>
+                        <img src="assets/img/portfolio/pha.jpg" alt="">
+
+                        <div class="he-view">
+                            <div class="bg a0" data-animate="fadeIn">
                                 <h3 class="a1" data-animate="fadeInDown">Public Housing Authorities</h3>
-                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/0e99651ec61242648f3128e8fd36be4d_0" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/PublicHousingAuthorities/FeatureServer/0/query?outFields=*&where=1%3D1" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                                        
+                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/0e99651ec61242648f3128e8fd36be4d_0"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
+                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/PublicHousingAuthorities/FeatureServer/0/query?outFields=*&where=1%3D1"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
+                            </div>
+                            <!-- he bg -->
+                        </div>
+                        <!-- he view -->
+                    </div>
+                    <!-- he wrap -->
+                </div>
+                <!-- end col-12 -->
+
                 <div class="portfolio-item graphic-design">
                     <div class="he-wrap tpl6">
-					<h4>Public Housing Buildings</h4>
-					<img src="assets/img/portfolio/phb.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
+                        <h4>Public Housing Buildings</h4>
+                        <img src="assets/img/portfolio/phb.jpg" alt="">
+
+                        <div class="he-view">
+                            <div class="bg a0" data-animate="fadeIn">
                                 <h3 class="a1" data-animate="fadeInDown">Public Housing Buildings</h3>
-                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/2a462f6b548e4ab8bfd9b2523a3db4e2_0" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/PublicHousingBuildings/FeatureServer/0/query?outFields=*&where=1%3D1" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                    
+                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/2a462f6b548e4ab8bfd9b2523a3db4e2_0"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
+                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/PublicHousingBuildings/FeatureServer/0/query?outFields=*&where=1%3D1"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
+                            </div>
+                            <!-- he bg -->
+                        </div>
+                        <!-- he view -->
+                    </div>
+                    <!-- he wrap -->
+                </div>
+                <!-- end col-12 -->
+
                 <div class="portfolio-item books">
                     <div class="he-wrap tpl6">
-					<h4>Public Housing Developments</h4>
-					<img src="assets/img/portfolio/phd.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
+                        <h4>Public Housing Developments</h4>
+                        <img src="assets/img/portfolio/phd.jpg" alt="">
+
+                        <div class="he-view">
+                            <div class="bg a0" data-animate="fadeIn">
                                 <h3 class="a1" data-animate="fadeInDown">Public Housing Developments</h3>
-                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/1cef73e2612f4cf7a46f8e40108d72bc_0" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/PublicHousingDevelopments/FeatureServer/0/query?outFields=*&where=1%3D1" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
-                    
+                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/1cef73e2612f4cf7a46f8e40108d72bc_0"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
+                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/PublicHousingDevelopments/FeatureServer/0/query?outFields=*&where=1%3D1"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
+                            </div>
+                            <!-- he bg -->
+                        </div>
+                        <!-- he view -->
+                    </div>
+                    <!-- he wrap -->
+                </div>
+                <!-- end col-12 -->
+
                 <div class="portfolio-item graphic-design">
                     <div class="he-wrap tpl6">
-					<h4>Location Affordability Index</h4>
-					<img src="assets/img/portfolio/lai.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
+                        <h4>Location Affordability Index</h4>
+                        <img src="assets/img/portfolio/lai.jpg" alt="">
+
+                        <div class="he-view">
+                            <div class="bg a0" data-animate="fadeIn">
                                 <h3 class="a1" data-animate="fadeInDown">Location Affordability Index</h3>
-                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/27b53ea69f98474eb002ac3b9c6b51eb_0" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LocationAffordabilityIndexData/FeatureServer/0/query?outFields=*&where=1%3D1" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
-                        	</div><!-- he bg -->
-						</div><!-- he view -->		
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
+                                <a href="http://zillowhack.hud.opendata.arcgis.com/datasets/27b53ea69f98474eb002ac3b9c6b51eb_0"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
+                                <a href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/LocationAffordabilityIndexData/FeatureServer/0/query?outFields=*&where=1%3D1"
+                                   class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
+                            </div>
+                            <!-- he bg -->
+                        </div>
+                        <!-- he view -->
+                    </div>
+                    <!-- he wrap -->
+                </div>
+                <!-- end col-12 -->
 
-				<div class="portfolio-item graphic-design">
-					<div class="he-wrap tpl6">
-						<h4>Zillow Data</h4>
-						<img src="assets/img/portfolio/zillow.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-								<h3 class="a1" data-animate="fadeInDown">Zillow Data</h3>
-								<a href="https://communities.socrata.com/catalogs/hack-housing/" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-								<!--<a href="https://communities.socrata.com/catalogs/hack-housing/" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>-->
-							</div><!-- he bg -->
-						</div><!-- he view -->
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
+                <div class="portfolio-item graphic-design">
+                    <div class="he-wrap tpl6">
+                        <h4>Zillow Data</h4>
+                        <img src="assets/img/portfolio/zillow.jpg" alt="">
 
-				<div class="portfolio-item graphic-design">
-					<div class="he-wrap tpl6">
-						<h4>Census Data</h4>
-						<img src="assets/img/portfolio/census.jpg" alt="">
-						<div class="he-view">
-							<div class="bg a0" data-animate="fadeIn">
-								<h3 class="a1" data-animate="fadeInDown">Census Data</h3>
-								<a href="http://www2.census.gov/" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-								<!--<a href="http://www2.census.gov/" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>-->
-							</div><!-- he bg -->
-						</div><!-- he view -->
-					</div><!-- he wrap -->
-				</div><!-- end col-12 -->
+                        <div class="he-view">
+                            <div class="bg a0" data-animate="fadeIn">
+                                <h3 class="a1" data-animate="fadeInDown">Zillow Data</h3>
+                                <a href="https://communities.socrata.com/catalogs/hack-housing/" class="dmbutton a2"
+                                   data-animate="fadeInUp"><i class="fa fa-search"></i></a>
+                                <!--<a href="https://communities.socrata.com/catalogs/hack-housing/" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>-->
+                            </div>
+                            <!-- he bg -->
+                        </div>
+                        <!-- he view -->
+                    </div>
+                    <!-- he wrap -->
+                </div>
+                <!-- end col-12 -->
 
+                <div class="portfolio-item graphic-design">
+                    <div class="he-wrap tpl6">
+                        <h4>Census Data</h4>
+                        <img src="assets/img/portfolio/census.jpg" alt="">
 
-            </div><!-- portfolio -->
-        </div><!-- portfolio container -->
-	 </div><!--/Portfoliowrap -->
-	 
-	 
-	<!-- *****************************************************************************************************************
-	 MIDDLE CONTENT
-	 ***************************************************************************************************************** -->
-
-	 <div class="container mtb">
-	 	<div class="row">
-	 		<!--<div class="col-lg-4 col-lg-offset-1">-->
-		 		<!--<h4>More About Our Agency.</h4>-->
-		 		<!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>-->
- 				<!--<p><br/><a href="about.html" class="btn btn-theme">More Info</a></p>-->
-	 		<!--</div>-->
-	 		
-	 		<!--<div class="col-lg-3">-->
-	 			<!--<h4>Frequently Asked</h4>-->
-	 			<!--<div class="hline"></div>-->
-	 			<!--<p><a href="#">How cool is this hackathon?</a></p>-->
-	 			<!--<p><a href="#">Why don't we do this more often?</a></p>-->
-	 			<!--<p><a href="#">Where can I get at that data?</a></p>-->
-	 			<!--<p><a href="#">Is it hackathon or hack-a-thon?</a></p>-->
-	 		<!--</div>-->
-	 		<!---->
-	 		<!--<div class="col-lg-3">-->
-	 			<!--<h4>Latest Posts</h4>-->
-	 			<!--<div class="hline"></div>-->
-	 			<!--<p><a href="single-post.html">Our new site is live now.</a></p>-->
-	 			<!--<p><a href="single-post.html">Retina ready is not an option.</a></p>-->
-	 			<!--<p><a href="single-post.html">Bootstrap 3 framework is the best.</a></p>-->
-	 			<!--<p><a href="single-post.html">You need this theme, buy it now.</a></p>-->
-	 			<!--<p><a href="single-post.html">This theme is what you need.</a></p>-->
-	 		<!--</div>-->
-	 		
-	 	</div><! --/row -->
-	 </div><! --/container -->
-	 
-	<!-- *****************************************************************************************************************
-	 TESTIMONIALS
-	 ***************************************************************************************************************** -->
-	 <div id="twrap">
-	 	<div class="container centered">
-	 		<div class="row">
-	 			<div class="col-lg-8 col-lg-offset-2">
-	 			<i class="fa fa-comment-o"></i>
-	 			<p>HUD’s mission is to create strong, sustainable, inclusive communities and quality affordable homes for all. HUD is working to strengthen the housing market to bolster the economy and protect consumers; meet the need for quality affordable rental homes; utilize housing as a platform for improving quality of life; build inclusive and sustainable communities free from discrimination, and transform the way HUD does business.</p>
-	 			<h4><br/>Mission</h4>
-	 			<p>U.S. Department of Housing and Urban Development</p>
-	 			</div>
-	 		</div><! --/row -->
-	 	</div><! --/container -->
-	 </div><! --/twrap -->
-	 
-	<!-- *****************************************************************************************************************
-	 THANK YOU
-	 ***************************************************************************************************************** -->
-	 <div id="cwrap">
-		 <div class="container">
-		 	<div class="row centered">
-			 	<h3>A BIG THANK YOU GOES OUT TO OUR FRIENDS</h3>
-			 	<div class="col-md-offset-1 col-md-4 col-xs-6">
-			 		<img src="assets/img/team/zillow-logo.png" class="img-responsive">
-			 	</div>
-				<div class="col-md-offset-1 col-md-4 col-xs-6">
-					<img src="assets/img/team/socrata.png" class="img-responsive">
-				</div>
-		 	</div><! --/row -->
-		 </div><! --/container -->
-	 </div><! --/cwrap -->
-	</div>
+                        <div class="he-view">
+                            <div class="bg a0" data-animate="fadeIn">
+                                <h3 class="a1" data-animate="fadeInDown">Census Data</h3>
+                                <a href="http://www2.census.gov/" class="dmbutton a2" data-animate="fadeInUp"><i
+                                        class="fa fa-search"></i></a>
+                                <!--<a href="http://www2.census.gov/" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>-->
+                            </div>
+                            <!-- he bg -->
+                        </div>
+                        <!-- he view -->
+                    </div>
+                    <!-- he wrap -->
+                </div>
+                <!-- end col-12 -->
 
 
-
-	<!-- *****************************************************************************************************************
-	 FOOTER
-	 ***************************************************************************************************************** -->
-	 <div id="footerwrap">
-	 	<div class="container">
-		 	<div class="row">
-		 		<div class="col-lg-4">
-		 			<h4>About PD&R</h4>
-		 			<div class="hline-w"></div>
-		 			<p>The U.S. Department of Housing and Urban Development's (HUD's) Office of Policy Development and Research (PD&R) supports the Department's efforts to help create cohesive, economically healthy communities.</p>
-		 		</div>
-		 		<div class="col-lg-4">
-		 			<h4>Social Links</h4>
-		 			<div class="hline-w"></div>
-		 			<p>
-						<a href="" onclick="window.open('https://twitter.com/share', 'newwindow', 'width=550, height=450'); return false;"><i class="fa fa-twitter"></i></a>
-						<a href="//www.reddit.com/submit" onclick="window.open('//www.reddit.com/submit?url=' + encodeURIComponent(window.location), 'newwindow', 'width=550, height=450'); return false;" ><i class="fa fa-reddit"></i></a>
-						<a href="https://news.ycombinator.com/submit"  onclick="window.open('http://news.ycombinator.com/submitlink?u='+encodeURIComponent(document.location), 'newwindow', 'width=550, height=450'); return false;">
-							<i class="fa fa-hacker-news"></i>
-						</a>
-						<a href=""  onclick="window.open('http://www.facebook.com/sharer.php?u=%22'+encodeURIComponent(document.location), 'newwindow', 'width=550, height=450'); return false;">
-							<i class="fa fa-facebook"></i>
-						</a>
-						<a href="" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://http://hudegis.github.io/&title=HUD%20Zillow%20Hackathonarticle&summary=Best%20hackathon%20in%20the%20galaxy&source=HUD', 'newwindow', 'width=550, height=450'); return false;"><i class="fa fa-linkedin"></i></a>
-
-						<a href="" onclick="window.open('https://plusone.google.com/_/+1/confirm?hl=en&url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>', 'newwindow', 'width=550, height=450'); return false;"><i class="fa fa-google-plus"></i></a>
-		 			</p>
-		 		</div>
-		 		<div class="col-lg-4">
-		 			<h4>PD&R HQ</h4>
-		 			<div class="hline-w"></div>
-		 			<p>
-		 				451 7th Street S.W.<br/>
-		 				Washington, DC 20410<br/>
-						Telephone: (202) 708-1112<br/>
-						TTY: (202) 708-1455<br/>
-		 			</p>
-		 		</div>
-		 	
-		 	</div><! --/row -->
-	 	</div><! --/container -->
-	 </div><! --/footerwrap -->
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/retina-1.1.0.js"></script>
-	<script src="assets/js/jquery.hoverdir.js"></script>
-	<script src="assets/js/jquery.hoverex.min.js"></script>
-	<script src="assets/js/jquery.prettyPhoto.js"></script>
-  	<script src="assets/js/jquery.isotope.min.js"></script>
-  	<script src="assets/js/custom.js"></script>
+            </div>
+            <!-- portfolio -->
+        </div>
+        <!-- portfolio container -->
+    </div>
+    <!--/Portfoliowrap -->
 
 
-    <script>
-// Portfolio
-(function($) {
-	"use strict";
-	var $container = $('.portfolio'),
-		$items = $container.find('.portfolio-item'),
-		portfolioLayout = 'fitRows';
-		
-		if( $container.hasClass('portfolio-centered') ) {
-			portfolioLayout = 'masonry';
-		}
-				
-		$container.isotope({
-			filter: '*',
-			animationEngine: 'best-available',
-			layoutMode: portfolioLayout,
-			animationOptions: {
-			duration: 750,
-			easing: 'linear',
-			queue: false
-		},
-		masonry: {
-		}
-		}, refreshWaypoints());
-		
-		function refreshWaypoints() {
-			setTimeout(function() {
-			}, 1000);   
-		}
-				
-		$('nav.portfolio-filter ul a').on('click', function() {
-				var selector = $(this).attr('data-filter');
-				$container.isotope({ filter: selector }, refreshWaypoints());
-				$('nav.portfolio-filter ul a').removeClass('active');
-				$(this).addClass('active');
-				return false;
-		});
-		
-		function getColumnNumber() { 
-			var winWidth = $(window).width(), 
-			columnNumber = 1;
-		
-			if (winWidth > 1200) {
-				columnNumber = 5;
-			} else if (winWidth > 950) {
-				columnNumber = 4;
-			} else if (winWidth > 600) {
-				columnNumber = 3;
-			} else if (winWidth > 400) {
-				columnNumber = 2;
-			} else if (winWidth > 250) {
-				columnNumber = 1;
-			}
-				return columnNumber;
-			}       
-			
-			function setColumns() {
-				var winWidth = $(window).width(), 
-				columnNumber = getColumnNumber(), 
-				itemWidth = Math.floor(winWidth / columnNumber);
-				
-				$container.find('.portfolio-item').each(function() { 
-					$(this).css( { 
-					width : itemWidth + 'px' 
-				});
-			});
-		}
-		
-		function setPortfolio() { 
-			setColumns();
-			$container.isotope('reLayout');
-		}
-			
-		$container.imagesLoaded(function () { 
-			setPortfolio();
-		});
-		
-		$(window).on('resize', function () { 
-		setPortfolio();          
-	});
-})(jQuery);
+    <!-- *****************************************************************************************************************
+     MIDDLE CONTENT
+     ***************************************************************************************************************** -->
+
+    <div class="container mtb">
+        <div class="row">
+            <!--<div class="col-lg-4 col-lg-offset-1">-->
+            <!--<h4>More About Our Agency.</h4>-->
+            <!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>-->
+            <!--<p><br/><a href="about.html" class="btn btn-theme">More Info</a></p>-->
+            <!--</div>-->
+
+            <!--<div class="col-lg-3">-->
+            <!--<h4>Frequently Asked</h4>-->
+            <!--<div class="hline"></div>-->
+            <!--<p><a href="#">How cool is this hackathon?</a></p>-->
+            <!--<p><a href="#">Why don't we do this more often?</a></p>-->
+            <!--<p><a href="#">Where can I get at that data?</a></p>-->
+            <!--<p><a href="#">Is it hackathon or hack-a-thon?</a></p>-->
+            <!--</div>-->
+            <!---->
+            <!--<div class="col-lg-3">-->
+            <!--<h4>Latest Posts</h4>-->
+            <!--<div class="hline"></div>-->
+            <!--<p><a href="single-post.html">Our new site is live now.</a></p>-->
+            <!--<p><a href="single-post.html">Retina ready is not an option.</a></p>-->
+            <!--<p><a href="single-post.html">Bootstrap 3 framework is the best.</a></p>-->
+            <!--<p><a href="single-post.html">You need this theme, buy it now.</a></p>-->
+            <!--<p><a href="single-post.html">This theme is what you need.</a></p>-->
+            <!--</div>-->
+
+        </div>
+        <! --/row -->
+    </div>
+    <! --/container -->
+
+    <!-- *****************************************************************************************************************
+     TESTIMONIALS
+     ***************************************************************************************************************** -->
+    <div id="twrap">
+        <div class="container centered">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <i class="fa fa-comment-o"></i>
+
+                    <p>HUD’s mission is to create strong, sustainable, inclusive communities and quality affordable
+                        homes for all. HUD is working to strengthen the housing market to bolster the economy and
+                        protect consumers; meet the need for quality affordable rental homes; utilize housing as a
+                        platform for improving quality of life; build inclusive and sustainable communities free from
+                        discrimination, and transform the way HUD does business.</p>
+                    <h4><br/>Mission</h4>
+
+                    <p>U.S. Department of Housing and Urban Development</p>
+                </div>
+            </div>
+            <! --/row -->
+        </div>
+        <! --/container -->
+    </div>
+    <! --/twrap -->
+
+    <!-- *****************************************************************************************************************
+     THANK YOU
+     ***************************************************************************************************************** -->
+    <div id="cwrap">
+        <div class="container">
+            <div class="row centered">
+                <h3>A BIG THANK YOU GOES OUT TO OUR FRIENDS</h3>
+
+                <div class="col-md-offset-1 col-md-4 col-xs-6">
+                    <img src="assets/img/team/zillow-logo.png" class="img-responsive">
+                </div>
+                <div class="col-md-offset-1 col-md-4 col-xs-6">
+                    <img src="assets/img/team/socrata.png" class="img-responsive">
+                </div>
+            </div>
+            <! --/row -->
+        </div>
+        <! --/container -->
+    </div>
+    <! --/cwrap -->
+</div>
+
+
+<!-- *****************************************************************************************************************
+ FOOTER
+ ***************************************************************************************************************** -->
+<div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About PD&R</h4>
+
+                <div class="hline-w"></div>
+                <p>The U.S. Department of Housing and Urban Development's (HUD's) Office of Policy Development and
+                    Research (PD&R) supports the Department's efforts to help create cohesive, economically healthy
+                    communities.</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+
+                <div class="hline-w"></div>
+                <p>
+                    <a href=""
+                       onclick="window.open('https://twitter.com/share', 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-twitter"></i></a>
+                    <a href="//www.reddit.com/submit"
+                       onclick="window.open('//www.reddit.com/submit?url=' + encodeURIComponent(window.location), 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-reddit"></i></a>
+                    <a href="https://news.ycombinator.com/submit"
+                       onclick="window.open('http://news.ycombinator.com/submitlink?u='+encodeURIComponent(document.location), 'newwindow', 'width=550, height=450'); return false;">
+                        <i class="fa fa-hacker-news"></i>
+                    </a>
+                    <a href=""
+                       onclick="window.open('http://www.facebook.com/sharer.php?u=%22'+encodeURIComponent(document.location), 'newwindow', 'width=550, height=450'); return false;">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href=""
+                       onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://http://hudegis.github.io/&title=HUD%20Zillow%20Hackathonarticle&summary=Best%20hackathon%20in%20the%20galaxy&source=HUD', 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-linkedin"></i></a>
+
+                    <a href=""
+                       onclick="window.open('https://plusone.google.com/_/+1/confirm?hl=en&url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>', 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-google-plus"></i></a>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>PD&R HQ</h4>
+
+                <div class="hline-w"></div>
+                <p>
+                    451 7th Street S.W.<br/>
+                    Washington, DC 20410<br/>
+                    Telephone: (202) 708-1112<br/>
+                    TTY: (202) 708-1455<br/>
+                </p>
+            </div>
+
+        </div>
+        <! --/row -->
+    </div>
+    <! --/container -->
+</div>
+<! --/footerwrap -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/retina-1.1.0.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/jquery.hoverex.min.js"></script>
+<script src="assets/js/jquery.prettyPhoto.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/custom.js"></script>
+
+
+<script>
+    // Portfolio
+    (function ($) {
+        "use strict";
+        var $container = $('.portfolio'),
+                $items = $container.find('.portfolio-item'),
+                portfolioLayout = 'fitRows';
+
+        if ($container.hasClass('portfolio-centered')) {
+            portfolioLayout = 'masonry';
+        }
+
+        $container.isotope({
+            filter: '*',
+            animationEngine: 'best-available',
+            layoutMode: portfolioLayout,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            },
+            masonry: {}
+        }, refreshWaypoints());
+
+        function refreshWaypoints() {
+            setTimeout(function () {
+            }, 1000);
+        }
+
+        $('nav.portfolio-filter ul a').on('click', function () {
+            var selector = $(this).attr('data-filter');
+            $container.isotope({filter: selector}, refreshWaypoints());
+            $('nav.portfolio-filter ul a').removeClass('active');
+            $(this).addClass('active');
+            return false;
+        });
+
+        function getColumnNumber() {
+            var winWidth = $(window).width(),
+                    columnNumber = 1;
+
+            if (winWidth > 1200) {
+                columnNumber = 5;
+            } else if (winWidth > 950) {
+                columnNumber = 4;
+            } else if (winWidth > 600) {
+                columnNumber = 3;
+            } else if (winWidth > 400) {
+                columnNumber = 2;
+            } else if (winWidth > 250) {
+                columnNumber = 1;
+            }
+            return columnNumber;
+        }
+
+        function setColumns() {
+            var winWidth = $(window).width(),
+                    columnNumber = getColumnNumber(),
+                    itemWidth = Math.floor(winWidth / columnNumber);
+
+            $container.find('.portfolio-item').each(function () {
+                $(this).css({
+                    width: itemWidth + 'px'
+                });
+            });
+        }
+
+        function setPortfolio() {
+            setColumns();
+            $container.isotope('reLayout');
+        }
+
+        $container.imagesLoaded(function () {
+            setPortfolio();
+        });
+
+        $(window).on('resize', function () {
+            setPortfolio();
+        });
+    })(jQuery);
 </script>
-	<script>
-		$(window).bind('scroll',function(e){
-			parallaxScroll();
-		});
+<script>
+    $(window).bind('scroll', function (e) {
+        parallaxScroll();
+    });
 
-		function parallaxScroll(){
-			var scrolled = $(window).scrollTop();
-			$('#map-par').css('top',(0-(scrolled *.25))+'px');
-			$('#contain-par').css('top',(0-(scrolled *.75))+'px');
-		}
-	</script>
-  <script>
-	  function search(){
-		  window.location = 'http://zillowhack.hud.opendata.arcgis.com/'+'datasets?q='+document.getElementById('search-input').value
-	  }
-  </script>
-  </body>
+    function parallaxScroll() {
+        var scrolled = $(window).scrollTop();
+        $('#map-par').css('top', (0 - (scrolled * .25)) + 'px');
+        $('#contain-par').css('top', (0 - (scrolled * .75)) + 'px');
+    }
+</script>
+<script>
+    function search() {
+        window.location = 'http://zillowhack.hud.opendata.arcgis.com/' + 'datasets?q=' + document.getElementById('search-input').value
+    }
+</script>
+</body>
 </html>
