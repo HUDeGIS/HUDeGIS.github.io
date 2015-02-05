@@ -136,6 +136,10 @@
 				<p>
 					Here's how you would query the MultiFamily Properties layer for low income.
 				</p>
+				<p><strong>Subsidized Multifamily Properties</strong></p>
+				<p>The corresponding field for all HUD subsidized MF properties:</p>
+				<pre>is_subsidized_ind='Y'</pre>
+
 				<p><strong>Project-based Section 8 Properties</strong></p>
 				<p>The corresponding field for project-based Section 8 properties is: </p>
 				<pre>is_sec8_ind='Y'</pre>
@@ -188,8 +192,10 @@
 					<tr>
 						<td>Time</td>
 						<td>The time instant or the time extent to query.<br>
-							<strong>Time instant</strong>
-							Syntax: time=<timeInstant> time
+							<strong>Time instant</strong><br>
+							<em>Syntax:</em> time=timeInstant<br>
+							<em>Example:</em> time=1199145600000<br>
+							<strong>Time extent</strong><br>
 						</td>
 					</tr>
 					<tr>
@@ -2511,10 +2517,11 @@
 						<th title="Field #2">Column Description</th>
 					</tr></thead>
 					<tbody><tr><td>OBJECTID</td>
-						<td> </td>
+						<td>In ArcGIS, a system-managed value that uniquely identifies a record or feature. </td>
 					</tr>
 					<tr><td>GEOID</td>
-						<td> </td>
+						<td>Geographic Identifier - fully concatenated geographic code (State FIPS and district number)
+						</td>
 					</tr>
 					<tr><td>STATE</td>
 						<td> </td>
@@ -2526,16 +2533,16 @@
 						<td> </td>
 					</tr>
 					<tr><td>EACODE</td>
-						<td> </td>
+						<td>Bureau of Economic Analysis region code. </td>
 					</tr>
 					<tr><td>EANAME</td>
-						<td> </td>
+						<td>Bureau of Economic Analysis region code name. </td>
 					</tr>
 					<tr><td>HCV_PUBLIC</td>
-						<td> </td>
+						<td>Count of Housing Choice Vouchers in the Census Tracts (Tracts with counts of 11 vouchers or fewer are suppressed. </td>
 					</tr>
 					<tr><td>HCV_PCT_RENTER_OCC_UNITS</td>
-						<td> </td>
+						<td>Housing Choice Vouchers as percent of Total Renter Occupied units in a tract. </td>
 					</tr>
 					<tr><td>SHAPE</td>
 						<td>The characteristic appearance or visible form of a geographic object as represented on a map</td>
@@ -2790,6 +2797,11 @@
 	  });
 
 
+  </script>
+  <script>
+	  function search(){
+		  window.location = 'http://zillowhack.hud.opendata.arcgis.com/'+'datasets?q='+document.getElementById('search-input').value
+	  }
   </script>
 
   </body>
