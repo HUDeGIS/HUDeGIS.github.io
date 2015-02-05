@@ -145,19 +145,23 @@
             <br>
 
             <h3 id="examples">Example Queries</h3>
-
-            <p>
-                Here's how you would query the MultiFamily Properties layer for low income.
-            </p>
-
+            <p>A good place to begin is in collecting all the HUD subsidized Multi-Family properties.</p>
             <p><strong>Subsidized Multifamily Properties</strong></p>
 
-            <p>The corresponding field for all HUD subsidized MF properties:</p>
+            <p>The corresponding field allows you to query for all HUD subsidized MF properties:</p>
             <pre>is_subsidized_ind='Y'</pre>
+
+            <p>
+                To construct the query, we'll take the base URL, and replace the where statement "1=1"
+                with any valid SQL where statement. So for this example, we'd construct this query:
+            </p>
+            <pre>http://services.arcgis.com/VTyQ9soqVukalItT/ArcGIS/rest/services/MultiFamilyProperties/FeatureServer/0/query?where=IS_SUBSIDIZED_IND='Y'&outFields=*&outSR=4326&objectids=1&f=geojson</pre>
+
+
 
             <p><strong>Project-based Section 8 Properties</strong></p>
 
-            <p>The corresponding field for project-based Section 8 properties is: </p>
+            <p>A logical second step would be to query the Multi-Family Properties layer for low income, and the corresponding field for project-based Section 8 properties is: </p>
             <pre>is_sec8_ind='Y'</pre>
             <p>
                 so the query http string that returns the data in geojson looks like this:
@@ -188,6 +192,7 @@
             </p>
             <pre>http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?<strong>where=HUB_NAME_TEXT='Seattle'+AND+(IS_811_CAPITAL_ADVANCE_IND='Y'+OR+IS_PAC_811_IND='Y'+OR+IS_PRAC_811_IND='Y')</strong>&f=pgeojson</pre>
             <br>
+
 
             <h3>All Query Parameters</h3>
             <table class="table">
