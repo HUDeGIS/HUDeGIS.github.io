@@ -612,4 +612,4 @@
         return this.unbind("click.prettyphoto").bind("click.prettyphoto", e.prettyPhoto.initialize)
     };
 })(jQuery);
-var pp_alreadyInitialized = false
+var pp_alreadyInitialized = false;

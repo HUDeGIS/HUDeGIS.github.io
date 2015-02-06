@@ -78,7 +78,7 @@
 
     RetinaImagePath.prototype.is_external = function () {
         return !!(this.path.match(/^https?\:/i) && !this.path.match('//' + document.domain) )
-    }
+    };
 
     RetinaImagePath.prototype.check_2x_variant = function (callback) {
         var http, that = this;
@@ -109,10 +109,10 @@
                 } else {
                     return callback(false);
                 }
-            }
+            };
             http.send();
         }
-    }
+    };
 
 
     function RetinaImage(el) {
@@ -142,7 +142,7 @@
         }
 
         load();
-    }
+    };
 
 
     if (Retina.isRetina()) {

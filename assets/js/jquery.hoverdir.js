@@ -141,8 +141,6 @@
                     toStyle = slideLeft;
                     break;
             }
-            ;
-
             return {from: fromStyle, to: toStyle};
 
         },
