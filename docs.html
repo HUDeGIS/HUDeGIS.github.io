@@ -234,104 +234,154 @@
                     <td>Time</td>
                     <td>The time instant or the time extent to query.<br>
                         <strong>Time instant</strong><br>
-                        <em>Syntax:</em> time=timeInstant<br>
-                        <em>Example:</em> time=1199145600000<br>
+                        <em>Syntax:&nbsp</em> <span class="code">time=timeInstant</span><br>
+                        <em>Example:&nbsp</em><span class="code"> time=1199145600000</span><br>
                         <strong>Time extent</strong><br>
-                        <em>Syntax:</em> time=startTime, endTime<br>
-                        <em>Example:</em> time=1199145600000, 1230768000000<br>
+                        <em>Syntax:&nbsp</em> <span class="code"> time=startTime, endTime</span><br>
+                        <em>Example:&nbsp</em><span class="code"> time=1199145600000, 1230768000000</span><br>
                     </td>
                 </tr>
                 <tr>
                     <td>Input Geometry</td>
-                    <td>Query by bounding box</td>
+                    <td>
+                        The geometry to apply as the spatial filter. The structure of the geometry
+                        is the same as the structure of the json geometry objects returned by the
+                        ArcGIS REST API. In addition to the json structures, for envelopes and points,
+                        you can specify the geometry with a simpler comma-separated syntax.<br>
+                        <em>Syntax:</em><br>
+                        <ul style="margin-left:15px">
+                            <li>json structures:&nbsp <span class="code">geometryType=&ltgeometryType&gt&geometry={geometry}</span>
+                            </li>
+                            <li>Envelope simple syntax:&nbsp <span class="code">geometryType=esriGeometryEnvelope&geometry=&ltxmin&gt,&ltymin&gt,&ltxmax&gt,&ltymax&gt}</span>
+                            </li>
+                            <li>Point simple syntax:&nbsp <span class="code">geometryType=esriGeometryPoint&geometry=&ltx&gt,&lty&gt</span>
+                            </li>
+                        </ul>
+                        <em>Examples:</em><br>
+                        <ul style="margin-left:15px">
+                            <li><span class="code">geometryType=&ltgeometryType&gt&geometry={xmin: -104, ymin: 35.6, xmax: -94.32, ymax: 41}</span>
+                            </li>
+                            <li><span class="code">geometryType=esriGeometryEnvelope&geometry=-104,35.6,-94.32,41</span>
+                            </li>
+                            <li><span class="code">geometryType=esriGeometryPoint&geometry=-104,35.6</span></li>
+                        </ul>
+                    </td>
                 </tr>
                 <tr>
                     <td>Geometry Type</td>
-                    <td>Options are envelope, point, polygon, polyline, and multipoint</td>
+                    <td>
+                        The type of geometry specified by the geometry parameter. The geometry type can be an envelope,
+                        point, line, or polygon. The default geometry type is an envelope.
+                        <br>
+                        <em>Values:</em><span class="code">&nbspesriGeometryPoint | esriGeometryMultipoint | esriGeometryPolyline | esriGeometryPolygon | esriGeometryEnvelope</span>
+                    </td>
+
                 </tr>
                 <tr>
                     <td>Input Spatial Reference</td>
-                    <td>Options are intersects, contains, crosses, envelope intersects, index intersects, overlaps,
-                        touches, within
+                    <td>
+                        The spatial relationship to be applied on the input geometry while performing the query. The
+                        supported spatial relationships include intersects, contains, envelope intersects, within, etc.
+                        The default spatial relationship is intersects (esriSpatialRelIntersects).
+                        <em>Options are:</em>&nbsp intersects, contains, crosses, envelope intersects, index intersects,
+                        overlaps,
+                        touches, and within.
                     </td>
                 </tr>
                 <tr>
                     <td>Distance</td>
-                    <td>Return distance values</td>
+                    <td>Distance to buffer input geometry.</td>
                 </tr>
                 <tr>
                     <td>Units</td>
                     <td>Return distance values in the specified units. Options are meters, miles, feet, kilometers,
-                        nautical miles, US nautical miles
+                        nautical miles, and US nautical miles.
                     </td>
                 </tr>
                 <tr>
                     <td>Out Fields</td>
-                    <td>Default is all (*)</td>
+                    <td>Attribute fields to include in response. Default is all (*).</td>
                 </tr>
                 <tr>
                     <td>Return Geometry</td>
-                    <td>Boolean parameter</td>
+                    <td>Boolean parameter. If 'true', each feature in the FeatureSet includes the geometry.</td>
                 </tr>
                 <tr>
                     <td>Max Allowable Offset</td>
-                    <td>Define allowable offset distance</td>
+                    <td>The maximum allowable offset used for generalizing geometries returned by the query operation.
+                    </td>
                 </tr>
                 <tr>
                     <td>Geometry Precision</td>
-                    <td>Define precision returned</td>
+                    <td>Specify the number of decimal places for the geometries returned by the query operation.</td>
                 </tr>
                 <tr>
                     <td>Output Spatial Reference</td>
-                    <td>Define output spatial reference</td>
+                    <td>The spatial reference for the returned geometry.</td>
                 </tr>
                 <tr>
                     <td>Return IDs Only</td>
-                    <td>Boolean parameter</td>
+                    <td> If true, the response only includes an array of object IDs. Otherwise the response is a feature
+                        set. The default is false.
+                    </td>
                 </tr>
                 <tr>
                     <td>Return Count Only</td>
-                    <td>Boolean parameter</td>
+                    <td>If true, the response only includes the count (number of features/records) that would be
+                        returned by a query. Otherwise the response is a feature set. The default is false. This option
+                        supersedes the returnIdsOnly parameter.
+                    </td>
                 </tr>
                 <tr>
                     <td>Return Extent Only</td>
-                    <td>Boolean parameter</td>
+                    <td>Boolean parameter set to return the query features extent only.</td>
                 </tr>
                 <tr>
                     <td>Order By Fields</td>
-                    <td>Define order by field string</td>
+                    <td>One or more field names using the features/records that need to be ordered. Use ASC or DESC for
+                        ascending or desending order respectively.
+                    </td>
                 </tr>
                 <tr>
                     <td>Group By Fields</td>
-                    <td>Group by fields (for statistics)</td>
+                    <td>Group by fields (for statistics).</td>
                 </tr>
                 <tr>
                     <td>Output Statistics</td>
-                    <td>Define output statistics</td>
+                    <td>The definitions for one or more field-based statistics to be calculated.</td>
                 </tr>
                 <tr>
                     <td>Result Offset</td>
-                    <td>Define result offset</td>
+                    <td>This option can be used for fetching query results by skipping the specified number of records
+                        and starts from the next record (i.e.resultOffset + 1th). The Default is 0.
+                    </td>
                 </tr>
                 <tr>
                     <td>Result Record Count</td>
-                    <td>Define result record count</td>
+                    <td>This option can be used for fetching query results up to the resultRecordCount specified. When
+                        resultOffset is specified but this parameter is not, map service defaults it to maxRecordCount.
+                        The maximum value for this parameter is the value of the layer's maxRecordCount property.
+                    </td>
                 </tr>
                 <tr>
                     <td>ReturnZ</td>
-                    <td>Boolean parameter</td>
+                    <td>If true, the Z values will be included in the results if the features have Z values. Otherwise Z
+                        values are not returned. The default is false.
+                    </td>
                 </tr>
                 <tr>
                     <td>ReturnM</td>
-                    <td>Boolean parameter</td>
+                    <td>If true, M values will be included in the results if the features have m values. Otherwise, M
+                        values are not returned. The default is false.
+                    </td>
                 </tr>
                 <tr>
                     <td>Quantization Parameters</td>
-                    <td>Define quantization parameters</td>
+                    <td>Used to project the geometry onto a virtual grid, likely representing pixels on the screen.</td>
                 </tr>
                 <tr>
                     <td>Format</td>
-                    <td>Options include html, json, and geojson</td>
+                    <td>The response format. Default format is html but options include html, json, and geojson</td>
                 </tr>
                 </tbody>
             </table>

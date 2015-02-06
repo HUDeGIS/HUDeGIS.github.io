@@ -550,6 +550,9 @@ csmall2 {
     color: #01b2fe;
 }
 
+.code {
+    font-family: FreeMono, monospace
+}
 /*.lai-table td{*/
 /*text-align: center;*/
 /*}*/
