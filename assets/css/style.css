@@ -378,6 +378,40 @@ a:focus {
     line-height: 30px;
 }
 
+#hrlwrap {
+    background: url(../img/hrl.jpg) no-repeat center top;
+    margin-top: 0px;
+    padding-top: 60px;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 450px;
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#hrlwrap i {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+#hrlwrap p {
+    color: white;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+
 /* clients logo */
 #cwrap {
     background: #f7f7f7;
