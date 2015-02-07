@@ -4186,8 +4186,8 @@
         </div>
         <div class="col-sm-8 col-sm-offset-4">
             <h3 id="faq">FAQs</h3>
-            <h4>Q: What are the income limits for Washington?</h4>
-            <h4 class="table-head">A: Here they are:</h4>
+            <h4 class="table-head">Q: What are the income limits for Washington?</h4>
+            <h4>A: Here they are:</h4>
             <table class="table">
                 <thead><tr><th title="Field #1">Seattle-Tacoma-Bellevue, WA MSA</th>
                     <th title="Field #2">PROGRAM</th>
@@ -4267,6 +4267,14 @@
                     <td align="right">70800</td>
                 </tr>
                 </tbody></table>
+            <h4 class="table-head">Q: What's up with the coordinate format?</h4>
+            <h4>
+                A: The default projection for queries is EPSG:3857. If you want lat/longs, you'll need to
+                add the output spatial reference parameter to the query string.
+                <pre>{"wkid" : 4326}</pre>
+                Here's an example query that returns coordinates in GCS WGS 1984 which should work for most purposes.
+                <pre>http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/FairMarketRents/FeatureServer/0/query?where=1=1&outSR={"wkid":4326}&f=pgeojson</pre>
+            </h4>
 
         </div>
     </div>
